@@ -1,15 +1,119 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html, body {
   padding: 0;
   margin: 0;
   background: #020617;
   color: #f1f5f9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
 }
 
 * {
   box-sizing: border-box;
 }
+
+main {
+  padding: 24px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.status-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.connected { background: #10b981; }
+.status-dot.disconnected { background: #f43f5e; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.sat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .sat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.sat-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.sat-card.warm { border-color: #f59e0b; }
+.sat-card.hot { border-color: #f43f5e; }
+
+.sat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.eclipse { color: #a5b4fc; }
+.sun { color: #fde047; }
+
+.load-bar {
+  height: 4px;
+  background: #334155;
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.load-bar-fill {
+  height: 4px;
+  background: #38bdf8;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.metric-row:last-child { border-bottom: none; }
+
+.metric-label { color: #94a3b8; }
+.metric-value { font-family: monospace; }
