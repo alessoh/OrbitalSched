@@ -949,3 +949,9 @@ The cost figures for Lightning.ai H100 time and for the Anthropic API are accura
 The Vercel free hobby tier is more than enough for prototype traffic but is not suitable for production-scale demo loads. Moving to a Vercel Pro plan or to a custom hosting setup is a Stage Two consideration.
 
 If you take this prototype into a customer conversation, the most useful thing you can do is be specific and honest about which parts of the demonstration are real measurements of the trained policy's behavior and which parts are synthetic. The credibility you build in that conversation is the asset that converts pilot interest into Stage Two revenue.
+## Contact
+
+**Email:** h.alesso@comcast.net  
+**GitHub:** https://github.com/alessoh
+
+---
