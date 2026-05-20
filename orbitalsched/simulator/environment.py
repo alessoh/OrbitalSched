@@ -124,7 +124,7 @@ class WorkloadGenerator:
     def __init__(self, seed: int = 0):
         self.rng = np.random.default_rng(seed)
         self.next_job_id = 0
-      self.arrival_rate_per_s = 0.60  # ~10k jobs per 24h episode
+        self.arrival_rate_per_s = 0.60  # ~50k jobs per 24h episode
 
     def step(self, t_current: float, dt: float) -> list[Job]:
         expected = self.arrival_rate_per_s * dt
