@@ -62,7 +62,7 @@ class SatelliteConfig:
     mean_anomaly_deg: float = 0.0
 
     # Compute and power
-    compute_capacity_pflops: float = 1.0  # one H100-equivalent at full load
+    compute_capacity_pflops: float = 0.2  # one H100-equivalent at full load
     payload_power_w: float = 1000.0
     parasitic_bus_power_w: float = 150.0  # avionics + comms + ACS, always on
     survival_heater_w: float = 250.0  # activates below survival_heater_setpoint_c
@@ -124,7 +124,7 @@ class WorkloadGenerator:
     def __init__(self, seed: int = 0):
         self.rng = np.random.default_rng(seed)
         self.next_job_id = 0
-        self.arrival_rate_per_s = 0.60  # ~50k jobs per 24h episode
+        self.arrival_rate_per_s = 1.20  # ~50k jobs per 24h episode
 
     def step(self, t_current: float, dt: float) -> list[Job]:
         expected = self.arrival_rate_per_s * dt
