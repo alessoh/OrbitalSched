@@ -9,7 +9,7 @@
 
 ## What This Is
 
-OrbitalSched is the scheduling layer for orbital data centers, equivalent in role to what Kubernetes is for terrestrial cloud. The product takes a stream of inference job requests with latency, throughput, and price constraints, and decides which satellite in a constellation runs which job in which orbit, against a moving constraint set defined by thermal capacity, solar input, battery state, ground station visibility, and chip health.
+.OrbitalSched is the scheduling layer for orbital data centers, equivalent in role to what Kubernetes is for terrestrial cloud. The product takes a stream of inference job requests with latency, throughput, and price constraints, and decides which satellite in a constellation runs which job in which orbit, against a moving constraint set defined by thermal capacity, solar input, battery state, ground station visibility, and chip health.
 
 This repository contains the Stage One prototype, a fully software-based simulation and reinforcement-learning training pipeline that demonstrates the core thesis on a ten-satellite simulated constellation. The prototype is designed to be buildable by a small team in six to eight weeks of focused work, on a stack consisting of a Windows laptop for development, a single H100 GPU on Lightning.ai for training, and Vercel for the demonstration UI.
 
